@@ -31,11 +31,12 @@ public class SocialNetwork {
             }
         });
 
-        int k=1;
-        for (int i = 0; i < profiles.size(); i++) {
-            Profile profile = profiles.get(i);
-            System.out.println(k + ". " + profile.getName() + " -> Importanta: " + computeImportance(profile));
-            k++;
+        int contor=1;
+        for (int index = 0; index < profiles.size(); index++) {
+            Profile profile = profiles.get(index);
+            System.out.println(contor + ". " + profile.getName() + " -> Importanta: " + computeImportance(profile));
+            contor++;
         }
     }
 }
+
