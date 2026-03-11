@@ -46,8 +46,8 @@ public class Company implements Profile{
     public int getImportance(List<Profile> allProfiles) {
         int importanceCount = 0;
 
-        for (int i = 0; i < allProfiles.size(); i++) {
-            Profile profile = allProfiles.get(i);
+        for (int index = 0; index < allProfiles.size(); index++) {
+            Profile profile = allProfiles.get(index);
             if (profile.hasRelationshipWith(this)) {
                 importanceCount++;
             }
@@ -61,3 +61,4 @@ public class Company implements Profile{
         return false;
     }
 }
+
