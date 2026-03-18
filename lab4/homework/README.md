@@ -1,4 +1,4 @@
-City Street Network Analysis
+# City Street Network Analysis
 Acest proiect este o aplicație Java care modelează rețeaua stradală a unui oraș sub forma unui graf ponderat. Proiectul demonstrează utilizarea conceptelor de Programare Orientată pe Obiect (OOP), procesarea avansată a datelor folosind Java Stream API și rezolvarea de probleme algoritmice pe grafuri folosind biblioteca Graph4J.
 
 1. Funcționalități:
@@ -19,7 +19,7 @@ Transformă modelul obiectual într-o reprezentare matematică folosind Graph4J 
 Acest proiect folosește Maven pentru managementul dependențelor, în fișierul pom.xml. Pentru generarea numelor aleatorii s-a folosit JavaFaker, iar pentru structura și algoritmii pe grafuri s-a folosit Graph4J.
 
 Configurare pom.xml:
-XML
+'''xml
  <dependencies> 
     <dependency>
         <groupId>org.graph4j</groupId>
@@ -32,6 +32,7 @@ XML
             <version>1.0.2</version>
         </dependency>
     </dependencies>
+    '''
 
 4. Rulare
 Asigurați-vă că aveți instalat Java Development Kit (JDK) 11 sau mai nou.
