@@ -32,7 +32,7 @@ Configurare pom.xml:
             <version>1.0.2</version>
         </dependency>
     </dependencies>
-    ```
+```
 
 4. Rulare
 Asigurați-vă că aveți instalat Java Development Kit (JDK) 11 sau mai nou.
