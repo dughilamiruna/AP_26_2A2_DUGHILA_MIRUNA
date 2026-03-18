@@ -19,7 +19,7 @@ Transformă modelul obiectual într-o reprezentare matematică folosind Graph4J 
 Acest proiect folosește Maven pentru managementul dependențelor, în fișierul pom.xml. Pentru generarea numelor aleatorii s-a folosit JavaFaker, iar pentru structura și algoritmii pe grafuri s-a folosit Graph4J.
 
 Configurare pom.xml:
-'''xml
+```xml
  <dependencies> 
     <dependency>
         <groupId>org.graph4j</groupId>
@@ -32,7 +32,7 @@ Configurare pom.xml:
             <version>1.0.2</version>
         </dependency>
     </dependencies>
-    '''
+    ```
 
 4. Rulare
 Asigurați-vă că aveți instalat Java Development Kit (JDK) 11 sau mai nou.
