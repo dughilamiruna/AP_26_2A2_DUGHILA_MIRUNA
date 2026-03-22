@@ -5,23 +5,42 @@ Permite adăugarea de elemente, salvarea/încărcarea acestora, vizualizarea lor
 
 ## Funcționalități  
 
-* **Modelare Orientată pe Obiecte:** Clasele `Catalog` și `Item` pentru reprezentarea resurselor. Fiecare resursă are un ID unic, titlu, locație (path local sau URL) și o listă de proprietăți dinamice (tag-uri).
-* **Command Design Pattern:** Toate acțiunile aplicației sunt încapsulate în clase specifice care implementează o interfață generică `Command` (ex: `AddCommand`, `ListCommand`, `ViewCommand`, `ReportCommand`).
-* **Desktop API Integration:** Comanda `ViewCommand` deschide automat fișierele locale sau link-urile web folosind aplicația implicită a sistemului de operare.
-* **Generare Rapoarte HTML:** Comanda `ReportCommand` utilizează **FreeMarker Template Engine** pentru a genera un raport vizual al catalogului (`report.ftl`) și îl deschide automat în browser.
-* **Excepții Personalizate:** Utilizarea clasei `InvalidCatalogException` pentru a semnala erorile apărute în timpul execuției comenzilor.
-* **Fat JAR / Executable Archive:** Proiectul este configurat folosind Maven (`maven-shade-plugin`) pentru a compila o arhivă executabilă independentă.
+* Clasele `Catalog` și `Item` pentru reprezentarea resurselor: fiecare resursă are un ID unic, titlu, locațieși o listă de proprietăți dinamice (tag-uri).
+* Toate acțiunile aplicației sunt încapsulate în clase specifice care implementează o interfață generică `Command` (`AddCommand`, `ListCommand`, `ViewCommand`, `ReportCommand`).
+* Comanda `ViewCommand` deschide automat fișierele locale sau link-urile web folosind aplicația implicită a sistemului de operare.
+* Comanda `ReportCommand` utilizează **FreeMarker Template Engine** pentru a genera un raport vizual al catalogului (`report.ftl`) și îl deschide automat în browser.
+* Utilizarea clasei `InvalidCatalogException` pentru a semnala erorile apărute în timpul execuției comenzilor.
+* Proiectul este configurat folosind Maven pentru a compila o arhivă executabilă independentă.
 
-## 🛠️ Tehnologii Utilizate
+## Tehnologii 
 
 * **Java 17+**
-* **Maven** (Dependency & Build Management)
-* **FreeMarker** (HTML Template Engine)
-* **Jackson** (JSON Serialization/Deserialization - opțional pentru Load/Save)
+* **Maven** 
+* **FreeMarker** 
+* **Jackson** 
 
-## ⚙️ Cum se construiește aplicația (Build)
+## Build-ul aplicatiei
 
 Proiectul folosește Maven. Pentru a genera arhiva JAR executabilă, rulează următoarea comandă în rădăcina proiectului:
-
-```bash
+```
 mvn clean package
+```
+Acest proces va descărca dependențele (cum ar fi FreeMarker) și va genera un fișier .jar executabil în folderul target/.
+
+## Run-ul
+
+Odată ce arhiva a fost generată cu succes, aplicația poate fi lansată direct din terminal:
+
+    java -jar target/nume-proiect-1.0-SNAPSHOT.jar
+
+La rulare, aplicația va:
+1. Crea un catalog în memorie.
+2. Adăuga resurse (cărți, articole).
+3. Genera un fișier catalog_report.html pe baza șablonului FreeMarker.
+4. Deschide automat raportul în browserul web implicit.
+
+## Structura Proiectului
+
+* src/main/java/org/example/ - Conține codul sursă (clasele model, excepțiile custom și comenzile).
+* src/main/resources/ - Conține fișierul report.ftl (șablonul pentru FreeMarker).
+* pom.xml - Configurarea Maven pentru dependențe și plugin-ul de generare a JAR-ului executabil.
