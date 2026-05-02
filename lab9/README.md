@@ -28,4 +28,4 @@ Acest proiect este o aplicație Java bazată pe consolă care simulează explora
 | `r` | **Resume:** Reia mișcarea personajelor și randarea labirintului. |
 | `-` | **Slow down:** Mărește timpul de somn al thread-urilor cu 500ms. |
 | `+` | **Speed up:** Scade timpul de somn al thread-urilor cu 500ms. |
-| `x` / `stop` | **Stop:** Oprește curat toate firele de execuție și închide aplicația. |
+| `x` | **Stop:** Oprește curat toate firele de execuție și închide aplicația. |
