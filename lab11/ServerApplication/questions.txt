@@ -1,0 +1,5 @@
+What is the largest planet in our solar system?|Earth|Mars|Jupiter|Saturn|3
+Which galaxy is home to the Earth?|Andromeda|Milky Way|Triangulum|Sombrero|2
+What is the main chemical element that makes up the Sun?|Helium|Oxygen|Carbon|Hydrogen|4
+How many planets are in our solar system?|7|8|9|10|2
+What celestial body is at the center of our solar system?|The Earth|The Moon|A Black Hole|The Sun|4
